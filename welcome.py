@@ -16,9 +16,9 @@ logging.basicConfig(format=format, level=logging.INFO,
                     datefmt="%H:%M:%S")
 
 def thread_motor_halfstep(name):
-    logging.info("Motor %s: starting", name)
+    # logging.info("Motor %s: starting", name)
     my_motor.turn_halfstep()
-    logging.info("Motor %s: finishing", name)
+    # logging.info("Motor %s: finishing", name)
 
 ##def thread_music(name):
 ##    logging.info("Music %s: starting", name)
@@ -26,9 +26,9 @@ def thread_motor_halfstep(name):
 ##    logging.info("Music %s: finishing", name)
 
 def thread_music_on(name):
-    logging.info("Music %s: starting", name)
+    # logging.info("Music %s: starting", name)
     my_music.turn_on()
-    logging.info("Music %s: finishing", name)
+    # logging.info("Music %s: finishing", name)
 
 
 def motor_onoff():
@@ -36,11 +36,11 @@ def motor_onoff():
     if my_motor.is_on():
         # logging.info("Main    : before creating thread")
         x = threading.Thread(target=thread_motor_halfstep, args=(1,))
-        logging.info("Main    : before running thread")
+        # logging.info("Main    : before running thread")
         x.start()
         # logging.info("Main    : wait for the thread to finish")
         # x.join()
-        logging.info("Main    : all done")
+        # logging.info("Main    : all done")
 
 def print_motor():
     print(str(my_motor))
@@ -54,13 +54,13 @@ def music_onoff():
         music_on()
 
 def music_on():
-    logging.info("Main    : before creating thread")
+    # logging.info("Main    : before creating thread")
     x = threading.Thread(target=thread_music_on, args=(2,))
-    logging.info("Main    : before running thread")
+    # logging.info("Main    : before running thread")
     x.start()
     # logging.info("Main    : wait for the thread to finish")
     # x.join()
-    logging.info("Main    : all done")        
+    # logging.info("Main    : all done")        
         
 def music_playpause():
     my_music.play_pause()
