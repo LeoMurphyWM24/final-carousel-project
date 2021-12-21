@@ -13,14 +13,16 @@ class Music:
         # Add more tunes here
         sound_path = "/media/pi/LEO MURPHY/PHYS 351/Final Project/leo_final_project/Sound/"
         self.__tune_paths = [
-            sound_path + "MarioB4.mp3",
-            sound_path + "Mario2.mp3",
-            sound_path + "MarioB6.mp3",
-            sound_path + "Mario1.mp3"]
-        self.__tune_names = ["Start",
-                             "Invincibility Star",
-                             "Finish",
-                             "Mario theme"]
+            sound_path + "Mario6.mp3",
+            sound_path + "Mario1.mp3",
+            sound_path + "MarioCM.mp3",
+            sound_path + "Mario10.mp3",
+            sound_path + "MarioSA.mp3"]
+        self.__tune_names = ["Underground",
+                             "Main theme",
+                             "Coconut Mall",
+                             "Jittery",
+                             "Sunshine Airport"]
         
         # self.__tune_list = [pygame.mixer.music.load(path) for path in self.__tune_paths]
 

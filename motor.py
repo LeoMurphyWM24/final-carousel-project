@@ -25,7 +25,7 @@ class Motor:
 
     
     def __init__(self):
-        self.__clockwise = True  # cw direction
+        self.__clockwise = False  # cw direction
         self.__delay = 0.05      # seconds
         self.__on = False        # True/False
 
